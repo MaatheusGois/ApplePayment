@@ -12,7 +12,7 @@ import PassKit
 
 class ViewController: UIViewController {
     
-    // Data Setup
+    /// Data **Setup**
     var shoeData: Shoes {
         return Shoe.shoesExample()
     }
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         shoePickerView.dataSource = self
     }
     
+    //MARK: - Actions
     @IBAction func buyShoeTapped(_ sender: UIButton) {
         let selectedIndex = shoePickerView.selectedRow(inComponent: 0)
         let shoe = shoeData[selectedIndex]
@@ -39,7 +40,7 @@ class ViewController: UIViewController {
 
 
 extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
-    
+
     // MARK: - Pickerview update
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

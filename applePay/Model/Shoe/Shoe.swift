@@ -23,5 +23,5 @@ struct Shoe {
     }
 }
 
-
+///This declare the shoes to Array of *Shoe*
 typealias Shoes = [Shoe]
